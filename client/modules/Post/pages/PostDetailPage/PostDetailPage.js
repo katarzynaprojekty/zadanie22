@@ -2,19 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Helmet from 'react-helmet';
-import { FormattedMessage } from 'react-intl';
 import { injectIntl, FormattedMessage } from 'react-intl';
 
 // Import Style
 import styles from '../../components/PostListItem/PostListItem.css';
 
 // Import Actions
-import { fetchPost, editPostRequest } from '../../PostActions';
-import { toggleEditPost } from '../../../App/AppActions';
+import { fetchPost, editPostRequest } from '../../PostActions.js';
+import { toggleEditPost } from '../../../App/AppActions.js';
 
 // Import Selectors
-import { getPost } from '../../PostReducer';
-import { getShowEditPost } from '../../../App/AppReducer';
+import { getShowEditPost } from '../../../App/AppReducer.js';
+import { getPost } from '../../PostReducer.js';
 
 export class PostDetailPage extends React.Component {
   constructor(props) {
@@ -82,6 +81,13 @@ export class PostDetailPage extends React.Component {
 PostDetailPage.need = [params => {
   return fetchPost(params.cuid);
 }];
+
+function mapDispatchToProps(dispatch, props) {
+  return {
+    toggleEditPost: () => dispatch(toggleEditPost()),
+    editPostRequest: (post) => dispatch(editPostRequest(props.params.cuid, post)),
+  };
+}
 
 // Retrieve data from store as props
 function mapStateToProps(state, props) {
