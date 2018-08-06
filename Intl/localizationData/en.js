@@ -4,6 +4,8 @@ export default {
     siteTitle: 'MERN Starter Blog',
     addPost: 'Add Post',
     editPost: 'Edit Post',
+    thumbUpPost: 'Upvote Post',
+    thumbDownPost: 'Downvote Post',
     switchLanguage: 'Switch Language',
     twitterMessage: 'We are on Twitter',
     by: 'By',
