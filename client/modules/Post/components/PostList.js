@@ -13,6 +13,8 @@ function PostList(props) {
             post={post}
             key={post.cuid}
             onDelete={() => props.handleDeletePost(post.cuid)}
+            onVoteUp={() => props.handleVoteUpPost(post.cuid)}
+            onVoteDown={() => props.handleVoteDownPost(post.cuid)}
             onEditPost={() => props.handleEditPost()}
           />
         ))
@@ -30,6 +32,8 @@ PostList.propTypes = {
     cuid: PropTypes.string.isRequired,
   })).isRequired,
   handleDeletePost: PropTypes.func.isRequired,
+  handleVoteUpPost: PropTypes.func.isRequired,
+  handleVoteDownPost: PropTypes.func.isRequired,
   handleEditPost: PropTypes.func.isRequired,
 };
 
