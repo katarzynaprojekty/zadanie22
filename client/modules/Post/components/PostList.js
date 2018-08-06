@@ -13,6 +13,7 @@ function PostList(props) {
             post={post}
             key={post.cuid}
             onDelete={() => props.handleDeletePost(post.cuid)}
+            onEditPost={() => props.handleEditPost()}
           />
         ))
       }
@@ -29,6 +30,7 @@ PostList.propTypes = {
     cuid: PropTypes.string.isRequired,
   })).isRequired,
   handleDeletePost: PropTypes.func.isRequired,
+  handleEditPost: PropTypes.func.isRequired,
 };
 
 export default PostList;
