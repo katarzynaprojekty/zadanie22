@@ -17,7 +17,7 @@ function PostListItem(props) {
       <p className={styles['author-name']}><FormattedMessage id="by" /> {props.post.name}</p>
       <p className={styles['post-desc']}>{props.post.content}</p>
       <p className={styles['post-action']}><a href="#" onClick={props.onDelete}><FormattedMessage id="deletePost" /></a></p>
-      <p className={styles['post-action']}><a href="#" onClick={props.onEditPost}><FormattedMessage id="editPost" /></a></p>
+      <p className={styles['post-action']}>< Link to={`/posts/${props.post.slug}-${props.post.cuid}`} onClick={props.onEditPost}><FormattedMessage id="editPost" /></Link></p>
       <hr className={styles.divider} />
     </div>
   );
