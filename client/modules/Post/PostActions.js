@@ -87,7 +87,7 @@ export function thumbUpPost(cuid) {
   return {
     type: THUMB_UP_POST,
     cuid,
-  }
+  };
 }
 
 export function thumbUpPostRequest(cuid) {
@@ -100,11 +100,11 @@ export function thumbDownPost(cuid) {
   return {
     type: THUMB_DOWN_POST,
     cuid,
-  }
+  };
 }
 
 export function thumbDownPostRequest(cuid) {
   return (dispatch) => {
-      return callApi(`posts/${cuid}`, 'put').then(() => dispatch(thumbDownPost(cuid)));
-    };
+    return callApi(`posts/${cuid}`, 'put').then(() => dispatch(thumbDownPost(cuid)));
+  };
 }
