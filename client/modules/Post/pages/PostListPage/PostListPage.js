@@ -7,7 +7,7 @@ import PostList from '../../components/PostList';
 import PostCreateWidget from '../../components/PostCreateWidget/PostCreateWidget';
 
 // Import Actions
-import { addPostRequest, fetchPosts, deletePostRequest } from '../../PostActions';
+import { addPostRequest, fetchPosts, deletePostRequest, thumbUpPostRequest, thumbDownPostRequest } from '../../PostActions';
 import { toggleAddPost, toggleEditPost } from '../../../App/AppActions';
 
 // Import Selectors
@@ -34,11 +34,19 @@ class PostListPage extends Component {
     this.props.dispatch(toggleEditPost(post));
   };
 
+
+  handleVoteUpPost = post => {
+    this.props.dispatch(thumbUpPostRequest(post));
+  };
+
+  handleVoteDownPost = post => {
+    this.props.dispatch(thumbDownPostRequest(post));
+  };
   render() {
     return (
       <div>
         <PostCreateWidget addPost={this.handleAddPost} showAddPost={this.props.showAddPost} />
-        <PostList handleDeletePost={this.handleDeletePost} posts={this.props.posts} handleEditPost={this.handleEditPost} posts={this.props.posts} />
+        <PostList handleDeletePost={this.handleDeletePost} handleEditPost={this.handleEditPost} posts={this.props.posts} handleVoteUpPost={this.handleVoteUpPost} handleVoteDownPost={this.handleVoteDownPost} />
       </div>
     );
   }
