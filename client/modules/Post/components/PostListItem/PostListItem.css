@@ -100,7 +100,10 @@ textarea {
 .post-action a:hover{
   color: #EF5350;
 }
-
+.post-action-group {
+  display: flex;
+  justify-content: space-around ;
+}
 .divider{
   border: 0;
   height: 1px;

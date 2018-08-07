@@ -16,10 +16,13 @@ function PostListItem(props) {
       </h3>
       <p className={styles['author-name']}><FormattedMessage id="by" /> {props.post.name}</p>
       <p className={styles['post-desc']}>{props.post.content}</p>
-      <p className={styles['post-action']}><a href="#" onClick={props.onDelete}><FormattedMessage id="deletePost" /></a></p>
-      <p className={styles['post-action']}>< Link to={`/posts/${props.post.slug}-${props.post.cuid}`} onClick={props.onEditPost}><FormattedMessage id="editPost" /></Link></p>
-      <p className={styles['post-action']}><a href="#" onClick={props.onVoteUp}><FormattedMessage id="thumbUpPost" /></a></p>
-      <p className={styles['post-action']}><a href="#" onClick={props.onVoteDown}><FormattedMessage id="thumbDownPost" /></a></p>
+      <p className={styles['post-desc']}>Votes: <span>{props.post.voteCount}</span></p>
+      <div className={styles['post-action-group']}>
+        <p className={styles['post-action']}><a href="#" onClick={props.onDelete}><FormattedMessage id="deletePost" /></a></p>
+        <p className={styles['post-action']}>< Link to={`/posts/${props.post.slug}-${props.post.cuid}`} onClick={props.onEditPost}><FormattedMessage id="editPost" /></Link></p>
+        <p className={styles['post-action']}><a href="#" onClick={props.onVoteUp}><FormattedMessage id="thumbUpPost" /></a></p>
+        <p className={styles['post-action']}><a href="#" onClick={props.onVoteDown}><FormattedMessage id="thumbDownPost" /></a></p>
+      </div>
       <hr className={styles.divider} />
     </div>
   );
