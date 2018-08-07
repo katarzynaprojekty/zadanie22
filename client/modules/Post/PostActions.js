@@ -90,9 +90,13 @@ export function thumbUpPost(cuid) {
   };
 }
 
-export function thumbUpPostRequest(cuid) {
+export function thumbUpPostRequest(post) {
   return (dispatch) => {
-    return callApi(`posts/${cuid}`, 'put').then(() => dispatch(thumbUpPost(cuid)));
+    return callApi(`posts/${post.cuid}`, 'put', {
+      post: {
+        voteCount: post.voteCount,
+      },
+    }).then(() => dispatch(thumbUpPost(post.cuid)));
   };
 }
 
@@ -103,8 +107,12 @@ export function thumbDownPost(cuid) {
   };
 }
 
-export function thumbDownPostRequest(cuid) {
+export function thumbDownPostRequest(post) {
   return (dispatch) => {
-    return callApi(`posts/${cuid}`, 'put').then(() => dispatch(thumbDownPost(cuid)));
+    return callApi(`posts/${post.cuid}`, 'put', {
+      post: {
+        voteCount: post.voteCount,
+      },
+    }).then(() => dispatch(thumbDownPost(post.cuid)));
   };
 }
