@@ -7,6 +7,12 @@
   float: right;
 }
 
+.edit-post-button:hover {
+  color: #03A9F4;
+  background: #FFF;
+  border: 1px solid #03A9F4;
+}
+
 .form {
   display: none;
   background: #FAFAFA;
@@ -64,18 +70,23 @@ textarea {
   margin: 20px 0;
   padding: 15px;
   border-radius: 2px;
+	box-shadow: 2px 2px 20px #444;
 }
 
 .post-title{
   font-size: 28px;
   margin-bottom: 16px;
   font-weight: 400;
-  color: #616161;
+  color: #616161; 
 }
 
 .post-title a{
   text-decoration: none;
   color: #616161;
+}
+
+.post-title a:hover {
+  color: #03A9F4;
 }
 
 .author-name{
@@ -90,6 +101,12 @@ textarea {
   margin-bottom: 8px;
 }
 
+.post-votes{
+  font-size: 14px;
+  margin-bottom: 8px;
+  padding-top: 4px;
+}
+
 .post-action a{
   color: #555;
   text-decoration: none;
@@ -98,7 +115,7 @@ textarea {
 }
 
 .post-action a:hover{
-  color: #EF5350;
+  color: #03A9F4;
 }
 .post-action-group {
   display: flex;
@@ -107,9 +124,9 @@ textarea {
 .divider{
   border: 0;
   height: 1px;
-  background: #ccc;
-  width: 250px;
-  margin: 32px auto 0;
+  background: #03A9F4;
+  width: 90%;
+  margin: 16px auto 0;
 }
 
 .post-detail .post-title{

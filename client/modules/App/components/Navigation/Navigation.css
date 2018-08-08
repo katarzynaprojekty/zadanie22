@@ -15,5 +15,7 @@
   color: #FFF;
   cursor: pointer;
   margin: 12px;
-
+}
+.navigation-link:hover {
+  color: #03A9F4;
 }
