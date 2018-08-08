@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
+// import { bindActionCreators } from 'redux';
 
 // Import Style
 import styles from './About.css';
@@ -9,22 +9,25 @@ import styles from './About.css';
 class About extends Component {
   render() {
     return (
+      <div>
+        <h3>About me</h3>
+      </div>
     );
   }
 }
 
-const mapStateToProps = (state) => {
-  return {};
-};
+// const mapStateToProps = (state) => {
+//   return {};
+// };
 
-const mapDispatchToProps = (dispatch) => {
-  return {};
-};
+// const mapDispatchToProps = (dispatch) => {
+//   return {};
+// };
 
-About.propTypes = {
-};
+// About.propTypes = {
+// };
 
 export default connect(
-  mapStateToProps,
-  mapDispatchToProps
+  // mapStateToProps,
+  // mapDispatchToProps
 )(About);
