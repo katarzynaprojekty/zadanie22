@@ -1,0 +1,19 @@
+.navigation {
+    background: rgba(0, 0, 0, 0.1);
+}
+.navigation-list {
+  list-style: none;
+  width: 980px;
+  margin: auto;
+  text-align: left;
+}
+.navigation-link {
+  font-weight: 300;
+  font-size: 22px;
+  float: left;
+  text-decoration: none;
+  color: #FFF;
+  cursor: pointer;
+  margin: 12px;
+
+}

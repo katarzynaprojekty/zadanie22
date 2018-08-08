@@ -20,11 +20,10 @@
 
 .site-title a {
   text-decoration: none;
-  color: #FFF;
+  color: #03A9F4;
 }
 
 .add-post-button {
-  display: inline-block;
   color: #FFF;
   background: #03A9F4;
   padding: 8px 16px;
